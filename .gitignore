@@ -4,3 +4,4 @@ db/
 .DS_Store
 Thumbs.db
 __pycache__/
+*.session.sql
