@@ -1,4 +1,2 @@
-src/db_init.py linguist-vendored
-
 queries/*.sql linguist-detectable=true
 queries/*.sql linguist-language=SQL
