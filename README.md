@@ -101,8 +101,6 @@ To ensure the full technical ID remains accessible without obstructing the view:
 ## Results Overview
 
 ![Dashboard Overview](assets/dashboard_overview.png)
-![Dashboard Overview](assets/dashboard_logistics.png)
-![Dashboard Overview](assets/dashboard_performance.png)
 
 ### Revenue Evolution
 Query 01_monthly_revenue.sql and the Performance dashboard tab highlight seasonal spikes (Black Friday) and global trends.
@@ -110,11 +108,13 @@ Query 01_monthly_revenue.sql and the Performance dashboard tab highlight seasona
 ### Customer Retention (Cohorts)
 Query 03_cohort_retention.sql generates a retention matrix.
 - Key Insight: The retention rate at Month+1 is less than 1%, indicating a model driven by continuous acquisition rather than loyalty.
+![Dashboard Overview](assets/dashboard_performance.png)
 
 ### Logistics Performance
 Query 04_delivery_delay.sql and the Logistics dashboard tab compares theoretical vs. actual delivery times.
 - Regional Fracture: Northern states (Amazonas, Roraima) suffer delays > 25 days, compared to ~8 days for São Paulo.
 - On-time Delivery: Analysis of theoretical vs. actual delivery times to identify bottleneck regions.
+![Dashboard Overview](assets/dashboard_logistics.png)
 
 ## Key insights (TL;DR)
 
