@@ -37,19 +37,18 @@ sql-ecommerce-analysis/
 ├─ dashboard/
 │  └─ ecommerce-vizualisation.pbix    # Interactive Power BI Dashboard  
 ├─ data/
-│  └─ raw/              # Raw CSVs (Source Kaggle)
+│  └─ raw/                            # Raw CSVs (Source Kaggle)
 ├─ db/
-│  └─ ecommerce.db      # Generated SQLite Database
 ├─ queries/
-│  ├─ 00_sanity_check.sql    # Quality control & exploration
-│  ├─ 01_monthly_revenue.sql # Revenue Analysis & Growth
-│  ├─ 02_vip_customers.sql   # Customer Segmentation
-│  ├─ 03_cohort_retention.sql# Retention Analysis (Cohorts)
-│  └─ 04_delivery_delay.sql  # Logistics Performance
+│  ├─ 00_sanity_check.sql             # Quality control & exploration
+│  ├─ 01_monthly_revenue.sql          # Revenue Analysis & Growth
+│  ├─ 02_vip_customers.sql            # Customer Segmentation
+│  ├─ 03_cohort_retention.sql         # Retention Analysis (Cohorts)
+│  └─ 04_delivery_delay.sql           # Logistics Performance
 ├─ src/
-│  └─ db_init.py        # Ingestion Script (CSV -> SQL)
+│  └─ db_init.py                      # Ingestion Script (CSV -> SQL)
 ├─ README.md
-└─ requirements.txt     # (pandas for ETL)
+└─ requirements.txt                   # (pandas for ETL)
 ```
 
 ## How to run
@@ -89,18 +88,12 @@ To solve the issue of 32-character hexadecimal UUIDs cluttering the UI, I implem
 Mathematical Validation (Entropy):
 By keeping 8 characters, the number of unique combinations remains statistically sufficient for this dataset (~100k rows)
 
-### Custom Floating Tooltips
-To ensure the full technical ID remains accessible without obstructing the view:
-- Dimensions: Custom canvas size of 80px x 300px.
-- Transparency: Background set to 100% transparency to create a "floating" text effect over the data rows.
-
-### Visual Polish & UI
-- Data Bars: Added conditional formatting to Revenue columns to allow instantaneous comparative analysis.
-- Renaming: Mapped technical database fields (e.g., product_category_name) to user-friendly labels (e.g., "Category") to reduce cognitive load.
+### Custom UI Features
+- Floating Tooltips: Minimalist transparent canvas (80x300px) to display full IDs without clutter.
+- Data Bars: Conditional formatting for instant revenue comparison.
+- Smart Reset: Bookmark-based button to clear all filters instantly.
 
 ## Results Overview
-
-![Dashboard Overview](assets/dashboard_overview.png)
 
 ### Revenue Evolution
 Query 01_monthly_revenue.sql and the Performance dashboard tab highlight seasonal spikes (Black Friday) and global trends.
@@ -108,7 +101,6 @@ Query 01_monthly_revenue.sql and the Performance dashboard tab highlight seasona
 ### Customer Retention (Cohorts)
 Query 03_cohort_retention.sql generates a retention matrix.
 - Key Insight: The retention rate at Month+1 is less than 1%, indicating a model driven by continuous acquisition rather than loyalty.
-![Dashboard Overview](assets/dashboard_performance.png)
 
 ### Logistics Performance
 Query 04_delivery_delay.sql and the Logistics dashboard tab compares theoretical vs. actual delivery times.
